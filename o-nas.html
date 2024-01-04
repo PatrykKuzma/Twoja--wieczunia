@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoja Świeczunia - O Nas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Dodanie faviconu -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <!-- Nagłówek -->
+    <header>
+        <h1><a href="/">Twoja Świeczunia </a></h1>
+        <p>Świeczki Zapachowe Ręcznie Robione</p>
+        
+        <!-- Przycisk nawigacyjny do sekcji z produktami -->
+        <nav>
+            <a href="o-nas.html" class="nav-link active">O Nas</a>
+            <a href="produkty.html" class="nav-link">Nasze Produkty</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Sekcja O Nas -->
+    <section id="o-firmie">
+        <h2>O Nas</h2>
+        <p>Jesteśmy pasjonatami tworzenia unikalnych świeczek zapachowych. Nasza działalność jest całkowicie amatorska, co oznacza, że każda świeczka jest wyrabiana z miłością i starannością. Wszystkie nasze produkty są wykonane ręcznie, co sprawia, że każda z nich jest wyjątkowa.</p>
+        <p>Specjalizujemy się w świeczkach o różnorodnych kształtach i zapachach, dostosowanych do różnych gustów. Jesteśmy otwarci na zamówienia specjalne i chętnie spełnimy Twoje indywidualne życzenia.</p>
+        <p>Dołącz do naszej społeczności miłośników świeczek i odkryj niepowtarzalny świat zapachów, którymi chętnie się dzielimy!</p>
+    </section>
+
+    <!-- Inne sekcje tutaj -->
+
+    <script>
+        // Skrypt JavaScript do podświetlania aktualnej sekcji w pasku nawigacyjnym
+        document.addEventListener("DOMContentLoaded", function() {
+            let navLinks = document.querySelectorAll('.nav-link');
+
+            function highlightNavLink() {
+                let scrollPosition = window.scrollY || window.pageYOffset;
+
+                navLinks.forEach(link => {
+                    let section = document.querySelector(link.getAttribute('href'));
+                    if (
+                        section.offsetTop <= scrollPosition &&
+                        section.offsetTop + section.offsetHeight > scrollPosition
+                    ) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+        });
+    </script>
+
+</body>
+</html>
