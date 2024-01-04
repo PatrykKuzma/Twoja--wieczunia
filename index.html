@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoja Świeczunia - Świeczki Zapachowe</title>
+    <title>Twoja Świeczunia - Kontakt</title>
     <link rel="stylesheet" href="style.css">
     <!-- Dodanie faviconu -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -17,11 +17,30 @@
         
         <!-- Przycisk nawigacyjny do sekcji z produktami -->
         <nav>
+            <a href="#produkty" class="nav-link">Nasze Produkty</a>
             <a href="o-nas.html" class="nav-link">O Nas</a>
-            <a href="produkty.html" class="nav-link">Nasze Produkty</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
+            <a href="kontakt.html" class="nav-link active">Kontakt</a>
         </nav>
     </header>
+
+    <!-- Sekcja Kontakt -->
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="https://formspree.io/f/xqkrkypk" method="post">
+            <label for="imie-nazwisko">Imię i Nazwisko:</label>
+            <input type="text" id="imie-nazwisko" name="imie-nazwisko" required>
+
+            <label for="miejsce-nawiazania-kontaktu">Miejsce nawiązania kontaktu:</label>
+            <input type="text" id="miejsce-nawiazania-kontaktu" name="miejsce-nawiazania-kontaktu" required>
+
+            <label for="email-nadawcy">Email nadawcy:</label>
+            <input type="email" id="email-nadawcy" name="email-nadawcy" required>
+
+            <textarea id="wiadomosc" name="wiadomosc" placeholder="Wpisz swoją wiadomość..." rows="4" required></textarea>
+
+            <input type="submit" value="Wyślij zgłoszenie">
+        </form>
+    </section>
 
     <!-- Inne sekcje tutaj -->
 
