@@ -35,7 +35,7 @@ nav a.active {
 
 #kontakt h2 {
     font-size: 24px;
-    color: #fff;
+    color: blue;
 }
 
 #kontakt form {
@@ -46,7 +46,7 @@ nav a.active {
 #kontakt label {
     display: block;
     font-size: 18px;
-    color: #fff;
+    color: blue;
     margin-bottom: 5px;
 }
 
@@ -75,5 +75,14 @@ nav a.active {
     margin-left: 40px;
     margin-right: 40px;
     font-size: larger;
-    color: rgb(0, 0, 0);
+    color:blue; 
+}
+
+#produkty {
+    padding: auto;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color:blue;
+    font-size: large;
 }
